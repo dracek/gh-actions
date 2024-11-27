@@ -37,16 +37,11 @@ jobs:
 
       - name: debug
         run: |
-          echo "current working directory"
-          pwd
-          cd ..
-          cd ..
-          pwd
-          ls -la
-          echo "_ _ _"    
+          cd $GITHUB_WORKSPACE
+          echo ls -la    
 
       - name: bump version
-        run: python bump-version.py ../../version.json
+        run: python bump-version.py .version.json
 
       - name: set git and push
         env:
