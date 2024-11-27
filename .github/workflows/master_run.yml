@@ -44,9 +44,7 @@ jobs:
           echo ls -la    
 
       - name: bump version
-        run: |
-          pip install json
-          python modify.py
+        run: python modify.py
 
       - name: set git and push
         env:
