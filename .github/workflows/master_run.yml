@@ -34,13 +34,14 @@ jobs:
           
       - name: update logs
         run: |
-          echo "${GLOBAL_VAR} hmmmm" >> logs.txt
+          echo "${{GLOBAL_VAR}} hmmmm" >> logs.txt
           echo "New commit to master: $(date) " >> logs.txt
 
       - name: commit changes to repository
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          echo "${{GITHUB_TOKEN}}"
           git config --local user.name "GitHub Actions Bot" 
           git config --local user.email "noreply-bot@github.com"
           git add logs.txt 
