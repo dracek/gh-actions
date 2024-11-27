@@ -35,6 +35,16 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: debug
+        run: |
+          echo "current working directory"
+          pwd
+          cd ..
+          cd ..
+          pwd
+          ls -la
+          echo "_ _ _"    
+
       - name: bump version
         run: python bump-version.py ../../version.json
 
