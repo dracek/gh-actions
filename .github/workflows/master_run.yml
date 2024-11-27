@@ -27,7 +27,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 
-
       - name: setup python
         uses: actions/setup-python@v4
         with:
@@ -39,7 +38,9 @@ jobs:
 
       - name: debug
         run: |
+          pwd
           cd $GITHUB_WORKSPACE
+          pwd
           echo ls -la    
 
       - name: bump version
