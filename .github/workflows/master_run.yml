@@ -52,7 +52,7 @@ jobs:
         run: |
           git config --local user.name "GitHub Actions Bot" 
           git config --local user.email "noreply-bot@github.com"
-          git add logs.txt 
+          git add version.json 
           git commit -m "bump"
           git push origin master
 
